@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './App.css'
 
 export default class FetchData extends React.Component {
   state = {
@@ -29,8 +30,16 @@ export default class FetchData extends React.Component {
 
     return (
       <div className="App">
-        <ul>{this.state.jsondata[0].name}</ul>
-        <img src={this.state.jsondata[0].url} width='400' height='400' />
+        <ul className="meme-list">
+          {this.state.jsondata.map(meme => (
+            <li>
+              <h1 className="meme-head">{meme.name}</h1>
+              <img className="meme-img" src={meme.url} />
+              <hr />
+            </li>
+          ))
+          }
+        </ul>
       </div>
     );
   }

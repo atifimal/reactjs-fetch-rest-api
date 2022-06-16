@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.meme-list li::marker {
+  color: transparent;
+}
+
+.meme-img {
+  width: 400px;
+  height: 400px;
+}
